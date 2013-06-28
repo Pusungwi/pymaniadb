@@ -1,0 +1,19 @@
+pymaniadb
+------
+
+A python module for maniadb.com.
+
+
+etc
+------
+http://www.maniadb.com/api/apispec.asp
+
+example
+------
+
+import pymaniadb 
+
+if __name__ == "__main__":
+	pymania = pymaniadb(apiKey="[HERE IS API KEY]") # go http://www.maniadb.com/api/apispec.asp and get API KEY. 
+	resultsArray = pymania.searchMusic(queryStr="muse", itemtypeStr="artist")
+	print(resultsArray)
