@@ -16,10 +16,13 @@ MANIADB_SEARCH_URL = 'search.asp' #검색 asp 파일 정보
 class pymaniadb:
 	def __init__(self, apiKey, debug=False):
 		#EloManager main class init method
-		print("paymaniadb Init...")
+		if debug == True:
+			print("paymaniadb Init...")
+
+		self.debug = debug
 		self.apiKey = apiKey
 
-	def searchMusic(self, queryStr, itemtypeStr, targetStr='music', displayNum=10):
+	def searchDB(self, queryStr, itemtypeStr, targetStr="music", displayNum=10):
 		SEARCH_PARAM = urllib.parse.urlencode({'key': self.apiKey, 'target': targetStr, 'itemtype':itemtypeStr, 'query':queryStr, 'display':displayNum},
 			encoding='utf-8')
 		resultDictsArray = []
@@ -45,6 +48,6 @@ class pymaniadb:
 		return resultDictsArray
 
 if __name__ == "__main__":
-	pymania = pymaniadb(apiKey='[HERE IS API KEY]')
-	resultsArray = pymania.searchMusic(queryStr="muse", itemtypeStr="artist")
+	pymania = pymaniadb(apiKey="[HERE IS API KEY]")
+	resultsArray = pymania.searchDB(queryStr="muse", itemtypeStr="album")
 	print(resultsArray)
