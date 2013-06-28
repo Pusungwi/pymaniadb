@@ -13,7 +13,7 @@ from lxml import etree
 MANIADB_ROOT_URL = 'http://www.maniadb.com/api/'
 MANIADB_SEARCH_URL = 'search.asp' #검색 asp 파일 정보
 
-class ManiaDBManager:
+class pymaniadb:
 	def __init__(self, apiKey, debug=False):
 		#EloManager main class init method
 		if debug == True:
@@ -48,6 +48,6 @@ class ManiaDBManager:
 		return resultDictsArray
 
 if __name__ == "__main__":
-	pymania = ManiaDBManager(apiKey="[HERE IS API KEY]")
+	pymania = pymaniadb(apiKey="[HERE IS API KEY]")
 	resultsArray = pymania.searchDB(queryStr="muse", itemtypeStr="album")
 	print(resultsArray)
