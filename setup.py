@@ -29,5 +29,5 @@ setup(name = "pymaniadb",
       author_email = "pusungwi@gmail.com",
       url = "http://github.com/pusungwi/pymaniadb/",
       py_modules = ("pymaniadb",),
-	  license = "bsd"
+	  license = "BSD"
 	)
