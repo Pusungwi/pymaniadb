@@ -3,6 +3,10 @@ pymaniadb
 
 A python module for maniadb.com.
 
+required
+------
+Python 3.x
+lxml
 
 etc
 ------
@@ -14,6 +18,6 @@ example
 import pymaniadb 
 
 if __name__ == "__main__":
-	pymania = pymaniadb(apiKey="[HERE IS API KEY]") # go http://www.maniadb.com/api/apispec.asp and get API KEY. 
-	resultsArray = pymania.searchMusic(queryStr="muse", itemtypeStr="artist")
-	print(resultsArray)
+	pymania = pymaniadb(apiKey="[HERE IS API KEY]")
+	resultsArray = pymania.searchDB(queryStr="muse", itemtypeStr="album")
+	print(resultsArray) // results in array[dicts, ...]
