@@ -23,7 +23,7 @@ def get_build():
 	return str(build)
 
 setup(name = "pymaniadb",
-      version = "0.1." + get_build(),
+      version = "0.3." + get_build(),
       author = "Yi Yeon Jae <pusungwi@gmail.com>",
 	  description = "A Python module for maniadb.com",
       author_email = "pusungwi@gmail.com",
