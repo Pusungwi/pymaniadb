@@ -16,6 +16,10 @@ example
 ===
 import pymaniadb 
 
-pymania = pymaniadb(apiKey="example")
+pymania = pymaniadb.pymaniadb(apiKey="example")
 resultsArray = pymania.searchDB(queryStr="muse", itemtypeStr="album")
 print(resultsArray) // results in array[dicts, ...]
+
+install
+===
+python setup.py install

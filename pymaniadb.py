@@ -29,7 +29,7 @@ class pymaniadb:
 		resultDictsArray = []
 	
 		try:
-			requestFullUrl = MANIADB_ROOT_URL + MANIADB_SEARCH_URL + '/' + queryStr + '/?' + SEARCH_PARAM
+			requestFullUrl = MANIADB_ROOT_URL + MANIADB_SEARCH_URL + queryStr + '/?' + SEARCH_PARAM
 			print(requestFullUrl)
 			recvSearchXml = urllib.request.urlopen(requestFullUrl)
 		except IOError:
@@ -54,7 +54,7 @@ class pymaniadb:
 		resultDictsArray = []
 	
 		try:
-			requestFullUrl = MANIADB_ROOT_URL + MANIADB_ALBUM_URL + '/' + idStr + '/?' + SEARCH_PARAM
+			requestFullUrl = MANIADB_ROOT_URL + MANIADB_ALBUM_URL + idStr + '/?' + SEARCH_PARAM
 			print(requestFullUrl)
 			recvSearchXml = urllib.request.urlopen(requestFullUrl)
 		except IOError:
