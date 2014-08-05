@@ -30,7 +30,6 @@ class pymaniadb:
 	
 		try:
 			requestFullUrl = MANIADB_ROOT_URL + MANIADB_SEARCH_URL + queryStr + '/?' + SEARCH_PARAM
-			print(requestFullUrl)
 			recvSearchXml = urllib.request.urlopen(requestFullUrl)
 		except IOError:
 			print("URL address or maniadb Error")
@@ -55,7 +54,6 @@ class pymaniadb:
 	
 		try:
 			requestFullUrl = MANIADB_ROOT_URL + MANIADB_ALBUM_URL + idStr + '/?' + SEARCH_PARAM
-			print(requestFullUrl)
 			recvSearchXml = urllib.request.urlopen(requestFullUrl)
 		except IOError:
 			print("URL address or maniadb Error")
